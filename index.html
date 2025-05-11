@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show do Esporte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Tela Inicial -->
+        <div id="start-screen" class="screen">
+            <h1>SHOW DO ESPORTE</h1>
+            <p>Responda 10 perguntas e mostre que você é o expert!</p>
+            <p>Dificuldade crescente | Pontuação por nível</p>
+            <button id="start-btn">COMEÇAR</button>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div id="game-screen" class="screen hidden">
+            <div class="header">
+                <span>Pergunta <span id="current-question">1</span>/10</span>
+                <span>Pontos: <span id="score">0</span></span>
+            </div>
+
+            <div class="timer-container">
+                <div class="timer-bar"></div>
+            </div>
+            <div class="timer-text">10s</div>
+            
+            <div id="question" class="question"></div>
+            
+            <div id="options" class="options">
+                <!-- Opções serão inseridas via JavaScript -->
+            </div>
+            
+            <div id="feedback"></div>
+            <button id="next-btn" class="hidden">Próxima</button>
+        </div>
+
+        <!-- Tela Final -->
+        <div id="end-screen" class="screen hidden">
+            <h1>RESULTADO</h1>
+            <div class="result">
+                Você acertou <span id="correct-count">0</span> de 10!
+            </div>
+            <div class="points">Total: <span id="total-points">0</span> pontos</div>
+            <p id="message"></p>
+            <h2>Top 10 Maiores Pontuadores:</h2>
+            <ul id="high-scores"></ul>  <!-- Lista de Top 10 -->
+            <button id="restart-btn">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
